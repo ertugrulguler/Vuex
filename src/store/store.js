@@ -8,7 +8,8 @@ export const store = new Vuex.Store({
 
     state:{
         counter:0,
-        clickCount:0
+        clickCount:0,
+        thirtCounter:0
     },
     getters:{
         getDoubleCounter(state){
@@ -16,6 +17,11 @@ export const store = new Vuex.Store({
         },
         clickCounter(state){
             return state.clickCount+" kez tıklandı.";
+        }
+    },
+    mutations:{
+        updateCounter(state,value){
+            return state.thirtCounter+=value;
         }
     }
 })

@@ -12,11 +12,13 @@ export default {
       // this.$emit("counterEvent", 1);
       this.$store.state.counter++;
       this.$store.state.clickCount++;
+      this.$store.commit("updateCounter",5);
     },
     decrementCounter(){
       // this.$emit("counterEvent", -1);
       this.$store.state.counter--;
       this.$store.state.clickCount++;
+      this.$store.commit("updateCounter",-5);
     }
   }
 }
