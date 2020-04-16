@@ -13,10 +13,15 @@ import {mapGetters} from 'vuex';
     //     return this.$store.getters.getDoubleCounter;
     //   }
     // }
-    computed:mapGetters({
+    computed:{
+        ...mapGetters({
         double:"getDoubleCounter",
         click:"clickCounter"
-    })
+      }),
+      customProp(){
+          
+      }
+    }
   }
 
 </script>
