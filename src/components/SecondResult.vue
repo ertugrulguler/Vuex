@@ -1,16 +1,22 @@
 <template>
   <div>
-    <p class="counter-container"> Sayaç : {{ counter }}</p>
+    <p class="counter-container"> Sayaç : {{ double }}</p>
+    <p class="counter-container"> Tıklanma Sayacı : {{ click }}</p>
   </div>
 </template>
 <script>
+import {mapGetters} from 'vuex';
   export default {
     // props : ["counter"]
-    computed:{
-      counter(){
-        return this.$store.getters.getDoubleCounter;
-      }
-    }
+    // computed:{
+    //   counter(){
+    //     return this.$store.getters.getDoubleCounter;
+    //   }
+    // }
+    computed:mapGetters({
+        double:"getDoubleCounter",
+        click:"clickCounter"
+    })
   }
 
 </script>
